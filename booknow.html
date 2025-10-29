@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Book Your Trip | FlyEasy</title>
+  </head>
+  <body>
+    <!-- ===== Navigation ===== -->
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html" class="logo">FlyEasy</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html#home">HOME</a></li>
+        <li><a href="index.html#about">ABOUT</a></li>
+        <li><a href="index.html#tour">TOUR</a></li>
+        <li><a href="index.html#package">PACKAGE</a></li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+        <li><a href="book.html" class="active">BOOK TRIP</a></li>
+      </ul>
+      <div class="nav__btns">
+        <button class="btn">BOOK TRIP</button>
+      </div>
+    </nav>
+
+    <!-- ===== Booking Form Section ===== -->
+    <section class="section__container booking__container">
+      <h2 class="section__header">Book Your Dream Trip</h2>
+      <p class="section__description">
+        Fill out your travel details and let Skywings take care of the rest.
+      </p>
+
+      <form class="booking__form">
+        <div class="form__group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="form__group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form__group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="+91 9876543210" required />
+        </div>
+
+        <div class="form__group">
+          <label for="destination">Destination</label>
+          <select id="destination" required>
+            <option value="">Select Destination</option>
+            <option>New York, USA</option>
+            <option>Paris, France</option>
+            <option>Bali, Indonesia</option>
+            <option>Tokyo, Japan</option>
+            <option>Maldives</option>
+          </select>
+        </div>
+
+        <div class="form__row">
+          <div class="form__group">
+            <label for="departure">Departure Date</label>
+            <input type="date" id="departure" required />
+          </div>
+
+          <div class="form__group">
+            <label for="return">Return Date</label>
+            <input type="date" id="return" required />
+          </div>
+        </div>
+
+        <div class="form__group">
+          <label for="travellers">No. of Travellers</label>
+          <input type="number" id="travellers" min="1" max="10" value="1" required />
+        </div>
+
+        <div class="form__group">
+          <label for="message">Additional Requests</label>
+          <textarea id="message" rows="4" placeholder="Any special requirements?"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Submit Booking</button>
+        <p class="thankyoumsg">Thank you for booking with Skywings! We will contact you soon</p>
+      </form>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <div class="footer__bar">
+        Copyright © 2024 FlyEasy. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      
+      document.querySelector(".booking__form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        document.querySelector(".thankyoumsg").style.display = "block"
+          window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
